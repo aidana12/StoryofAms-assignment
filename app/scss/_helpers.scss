@@ -1,0 +1,50 @@
+//-- Colours
+$b: #000000;
+$w: #FFFFFF;
+$lr: #D5604D;
+$r: #DF3A1D;
+
+.accent {
+  color: $r;
+}
+
+.secondary-accent {
+  color: $lr;
+}
+
+//-- Fonts
+@font-face {
+  font-family: 'Akkurat';
+  src: url('./assets/fonts/Akkurat.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'AkkuratLight';
+  src: url('./assets/fonts/Akkurat Light.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ArchivoBlack-Regular';
+  src: url('./assets/fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+}
+
+a, button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+//-- Helper classes
+.ih {
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transform: perspective(1px) translateZ(0);
+
+  &:hover {
+    transform: scale(1.01);
+  }
+}
