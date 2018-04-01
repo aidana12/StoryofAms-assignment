@@ -1,6 +1,7 @@
-# Portfolio Website
-This is my portfolio website generated and developed with Angular CLI. 
-The website consists of a portfolio overview of all websites I have worked on, a game and an about me section.
+# Story of Ams assignment
+Story of AMS is a digital tech agency. We do custom web and mobile app development
+for forward thinking businesses. 
+https://storyofams.com/
 
 ## Installing dependencies
 
