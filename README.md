@@ -6,7 +6,6 @@ https://storyofams.com/
 ## Installing dependencies
 
 Run `npm install`.
-Run `bower install`.
 
 ## Development
 

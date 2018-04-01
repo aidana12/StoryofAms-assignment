@@ -17,7 +17,9 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "main-bower-files": "^2.13.1",
-    "run-sequence": "^2.2.1"
+    "run-sequence": "^2.2.1",
+    "normalize.css": "^8.0.0",
+    "jquery": "^3.3.1"
   },
   "devDependencies": {
     "browser-sync": "^2.23.6"

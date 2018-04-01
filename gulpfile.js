@@ -20,6 +20,16 @@ var pathTo = {
     scss: './app/scss/*.scss'
 };
 
+//------ Library
+var Lib = {
+    js: [
+        './node_modules/jquery/dist/jquery.min.js'
+    ],
+    css: [
+        './node_modules/normalize.css/normalize.css'
+    ]
+};
+
 //------ Main tasks
 gulp.task('default', function (cb) {
     run(['cleanDist'], ['build'], ['serve'], ['watch'], cb);
@@ -43,18 +53,18 @@ gulp.task('js', ['jsDep'], function () {
         .pipe(uglify())
         .pipe(gulp.dest(pathTo.dist));
 });
-gulp.task('jsDep', ['bower'], function () {
-    return gulp.src(pathTo.libJs)
+gulp.task('jsDep', function () {
+    return gulp.src(Lib.js)
         .pipe(concat('lib.js'))
         .pipe(uglify())
         .pipe(gulp.dest(pathTo.dist));
 });
 
 //-- Lib tasks
-gulp.task('bower', function () {
-    return gulp.src(bowerFiles(), {base: './bower_components'})
-        .pipe(gulp.dest('./app/lib/'));
-});
+// gulp.task('bower', function () {
+//     return gulp.src(bowerFiles(), {base: './bower_components'})
+//         .pipe(gulp.dest('./app/lib/'));
+// });
 
 //-- CSS tasks
 gulp.task('sass', ['cssDep'], function () {
@@ -73,7 +83,7 @@ gulp.task('sass', ['cssDep'], function () {
         .pipe(gulp.dest(pathTo.dist));
 });
 gulp.task('cssDep', function () {
-    return gulp.src(pathTo.libCss)
+    return gulp.src(Lib.css)
         .pipe(cleanCss({
             compatibility: 'ie9'
         }))
