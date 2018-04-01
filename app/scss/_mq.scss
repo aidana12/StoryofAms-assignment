@@ -6,6 +6,14 @@
     transition: max-height 0.25s ease-in-out;
     overflow: hidden;
 
+    .openNav {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 80px;
+      height: 80px;
+    }
+
     .hamburger {
       width: 25px;
       height: 2px;
@@ -58,6 +66,12 @@
         opacity: 0;
         transition: opacity 0.15s ease-in 0.2s;
 
+        span {
+          width: 25px;
+          height: 2px;
+          border-radius: 2px;
+        }
+
         .link {
           margin: 25px 0;
 
@@ -100,6 +114,7 @@
 
   .container-home:first-child {
     width: 90%;
+    height: calc(100vh - 80px);
     min-width: 0 !important;
 
     h1 {
@@ -144,7 +159,7 @@
 
     a {
       background-color: $b;
-      font-size: 23px;
+      font-size: 20px;
       padding: 25px;
 
       svg {

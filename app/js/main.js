@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $('.hamburger').click(function () {
+    $('.openNav').click(function () {
         var header = $('.container-header');
 
         if (header.hasClass('open')) {
