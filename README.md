@@ -1,5 +1,5 @@
 # Story of Ams assignment
-Story of AMS is a digital tech agency. We do custom web and mobile app development
+Story of AMS is a digital tech agency. They do custom web and mobile app development
 for forward thinking businesses. 
 https://storyofams.com/
 
