@@ -1,9 +1,13 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    // function customFadeIn() {
-    //     $('.sc').removeClass('customFadeIn');
-    // }
-    //
-    // setTimeout(customFadeIn, 500)
+    $('.hamburger').click(function () {
+        var header = $('.container-header');
+
+        if (header.hasClass('open')) {
+            header.removeClass('open')
+        } else {
+            header.addClass('open')
+        }
+    });
 
 });

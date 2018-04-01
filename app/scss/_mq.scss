@@ -1,0 +1,149 @@
+@media only screen and (max-width: 860px) {
+
+  .container-header {
+    max-height: 80px;
+    height: 100%;
+    transition: max-height 0.25s ease-in-out;
+    overflow: hidden;
+
+    .hamburger {
+      width: 25px;
+      height: 2px;
+      background: #df3a1d;
+      position: absolute;
+      right: 23px;
+      top: 39px;
+      border-radius: 2px;
+
+      &:before {
+        content: '';
+        width: 25px;
+        height: 2px;
+        background: #df3a1d;
+        position: absolute;
+        right: 0;
+        top: -7px;
+        border-radius: 2px;
+        transition: 0.15s ease-in;
+      }
+
+      &:after {
+        content: '';
+        width: 25px;
+        height: 2px;
+        background: #df3a1d;
+        position: absolute;
+        right: 0;
+        top: 7px;
+        border-radius: 2px;
+        transition: 0.15s ease-in;
+      }
+    }
+
+    .nav {
+      width: 100%;
+      background: white;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: center;
+
+      .logo {
+        width: calc(100% - 46px);
+        padding: 23px;
+      }
+
+      .links {
+        width: 90%;
+        flex-flow: column nowrap;
+        opacity: 0;
+        transition: opacity 0.15s ease-in 0.2s;
+
+        .link {
+          margin: 25px 0;
+
+          &.button {
+            padding: 10px 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .container-header.open {
+    width: 100vw;
+    max-height: 100vh;
+
+    .links {
+      opacity: 1;
+    }
+
+    .hamburger {
+      background-color: white;
+
+      &:before {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+
+      &:after {
+        top: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .home {
+    height: auto;
+    min-height: 570px;
+    padding-top: 80px;
+  }
+
+  .container-home:first-child {
+    width: 90%;
+    min-width: 0 !important;
+
+    h1 {
+      font-size: 47px;
+      line-height: 58px;
+    }
+
+    h3 {
+      font-size: 23px;
+      line-height: 37px;
+    }
+  }
+
+  .container-home:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.1;
+
+    .container-img:nth-child(2) {
+      height: calc(100% - 25px);
+    }
+
+    img {
+      width: 55%;
+    }
+  }
+
+
+  .signup {
+    position: fixed;
+
+    &:after {
+      height: 86px;
+    }
+
+    a {
+      background-color: $b;
+      font-size: 23px;
+      padding: 20px;
+    }
+  }
+
+}
