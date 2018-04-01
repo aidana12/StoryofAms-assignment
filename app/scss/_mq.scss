@@ -136,13 +136,21 @@
     position: fixed;
 
     &:after {
-      height: 86px;
+      top: -14px;
+      right: -14px;
+      width: 90px;
+      height: 90px;
     }
 
     a {
       background-color: $b;
       font-size: 23px;
-      padding: 20px;
+      padding: 25px;
+
+      svg {
+        margin-left: 5px;
+        height: 20px;
+      }
     }
   }
 
