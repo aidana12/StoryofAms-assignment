@@ -11,13 +11,13 @@ var autoprefixer = require('gulp-autoprefixer'),
 
 //------ Directories
 var pathTo = {
-    assets: './app/assets/**/*',
+    assets: './src/assets/**/*',
     dist: './dist',
-    html: './app/*.html',
-    js: './app/js/*.js',
-    libCss: './app/lib/**/*.css',
-    libJs: './app/lib/**/*.js',
-    scss: './app/scss/*.scss'
+    html: './src/*.html',
+    js: './src/js/*.js',
+    libCss: './src/lib/**/*.css',
+    libJs: './src/lib/**/*.js',
+    scss: './src/scss/*.scss'
 };
 
 //------ Library
@@ -63,7 +63,7 @@ gulp.task('jsDep', function () {
 //-- Lib tasks
 // gulp.task('bower', function () {
 //     return gulp.src(bowerFiles(), {base: './bower_components'})
-//         .pipe(gulp.dest('./app/lib/'));
+//         .pipe(gulp.dest('./src/lib/'));
 // });
 
 //-- CSS tasks
@@ -117,7 +117,7 @@ gulp.task('serve', function() {
 
 //-- Watching
 gulp.task('watch', function () {
-    gulp.watch('./app/**/**/**/**/*.*', ['build']);
+    gulp.watch('./src/**/**/**/**/*.*', ['build']);
 });
 
 
